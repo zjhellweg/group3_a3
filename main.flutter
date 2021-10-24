@@ -59,6 +59,9 @@ class _MyHomePageState extends State<MyHomePage> {
                 },
                 child: Text("Zachary Hellweg"),
               ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(10.0),
               child: ElevatedButton(
                 style: ButtonStyle(
                   backgroundColor:
@@ -68,7 +71,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   Navigator.push(context,
                       MaterialPageRoute(builder: (context) => See()));
                 },
-                child: Text("Josh See"),
+                child: Text("Joshua See"),
               ),
             ),
           ],
@@ -76,5 +79,4 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
     );
   }
-}
 }
