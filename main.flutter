@@ -3,6 +3,8 @@ import './widgets/Hellweg.dart';
 import './widgets/see.dart';
 import './widgets/Quigley.dart';
 import './widgets/Scott.dart';
+import './widgets/Weidner.dart';
+
 
 void main() {
   runApp(MyApp());
@@ -102,6 +104,20 @@ class _MyHomePageState extends State<MyHomePage> {
                       MaterialPageRoute(builder: (context) => Scott()));
                 },
                 child: Text("Cody Scott"),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: ElevatedButton(
+                style: ButtonStyle(
+                  backgroundColor:
+                      MaterialStateProperty.all<Color>(Colors.cyan),
+                ),
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => Ben()));
+                },
+                child: Text("Ben Weidner"),
               ),
             ),
           ],
