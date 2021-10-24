@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:group3a3.dart';
+import 'package:group3a3/main.dart';
 
 class Scott extends StatefulWidget {
   const Scott({Key? key}) : super(key: key);
@@ -29,11 +29,11 @@ class _ScottState extends State<Scott> {
           ),
           ElevatedButton(
             style: ElevatedButton.styleFrom(
-              primary: Colors.lightBlue,
+              primary: Colors.orange,
             ),
             onPressed: () {
               Navigator.push(
-                  context, MaterialPageRoute(builder: (context) => main()));
+                  context, MaterialPageRoute(builder: (context) => MyApp()));
             },
             child: Text("GOTO Home"),
           ),

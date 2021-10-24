@@ -14,7 +14,7 @@ class _Quigley extends State<Quigley> {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          backgroundColor: Colors.blue,
+          backgroundColor: Colors.orange,
           title: Text("Charissa's Page"),
         ),
         body: Column(
