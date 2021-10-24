@@ -5,7 +5,6 @@ import './widgets/Quigley.dart';
 import './widgets/Scott.dart';
 import './widgets/Weidner.dart';
 
-
 void main() {
   runApp(MyApp());
 }
@@ -33,35 +32,44 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Group 3 Github Application"),
+        title: Padding(
+          padding: const EdgeInsets.all(10.0),
+          child: Text("Group 3 Github Application"),
+        ),
       ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: <Widget>[
-            Text(
-              "Group 3 Application",
-              style: TextStyle(
-                fontSize: 35,
+            Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: Text(
+                "Group 3 Application",
+                style: TextStyle(
+                  fontSize: 35,
+                ),
               ),
             ),
             Padding(
               padding: const EdgeInsets.all(10.0),
               child: ElevatedButton(
                 style: ButtonStyle(
-                  backgroundColor:
-                      MaterialStateProperty.all<Color>(Colors.pink),
-                ),
+                    backgroundColor:
+                        MaterialStateProperty.all<Color>(Colors.pink)),
                 onPressed: () {
                   Navigator.push(context,
                       MaterialPageRoute(builder: (context) => Hellweg()));
                 },
-                child: Text("Zachary Hellweg"),
+                child: SizedBox(
+                    width: 125,
+                    child: Text(
+                      "Zachary Hellweg",
+                      textAlign: TextAlign.center,
+                    )),
               ),
             ),
             Padding(
@@ -72,10 +80,15 @@ class _MyHomePageState extends State<MyHomePage> {
                       MaterialStateProperty.all<Color>(Colors.yellow),
                 ),
                 onPressed: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => See()));
+                  Navigator.push(
+                      context, MaterialPageRoute(builder: (context) => See()));
                 },
-                child: Text("Joshua See"),
+                child: SizedBox(
+                    width: 125,
+                    child: Text(
+                      "Joshua See",
+                      textAlign: TextAlign.center,
+                    )),
               ),
             ),
             Padding(
@@ -89,7 +102,12 @@ class _MyHomePageState extends State<MyHomePage> {
                   Navigator.push(context,
                       MaterialPageRoute(builder: (context) => Quigley()));
                 },
-                child: Text("Charissa Quigley"),
+                child: SizedBox(
+                    width: 125,
+                    child: Text(
+                      "Charissa Quigley",
+                      textAlign: TextAlign.center,
+                    )),
               ),
             ),
             Padding(
@@ -103,23 +121,32 @@ class _MyHomePageState extends State<MyHomePage> {
                   Navigator.push(context,
                       MaterialPageRoute(builder: (context) => Scott()));
                 },
-                child: Text("Cody Scott"),
+                child: SizedBox(
+                    width: 125,
+                    child: Text(
+                      "Cody Scott",
+                      textAlign: TextAlign.center,
+                    )),
               ),
             ),
             Padding(
-              padding: const EdgeInsets.all(10.0),
-              child: ElevatedButton(
-                style: ButtonStyle(
-                  backgroundColor:
-                      MaterialStateProperty.all<Color>(Colors.cyan),
-                ),
-                onPressed: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => Ben()));
-                },
-                child: Text("Ben Weidner"),
-              ),
-            ),
+                padding: const EdgeInsets.all(10.0),
+                child: ElevatedButton(
+                  style: ButtonStyle(
+                    backgroundColor:
+                        MaterialStateProperty.all<Color>(Colors.cyan),
+                  ),
+                  onPressed: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => bensPage()));
+                  },
+                  child: SizedBox(
+                      width: 125,
+                      child: Text(
+                        "Ben Weidner",
+                        textAlign: TextAlign.center,
+                      )),
+                ))
           ],
         ),
       ),
