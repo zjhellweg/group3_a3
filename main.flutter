@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import './widgets/Hellweg.dart';
-import './widgets/see.dart'
+import './widgets/see.dart';
+import './widgets/Quigley.dart';
 
 void main() {
   runApp(MyApp());
@@ -72,6 +73,20 @@ class _MyHomePageState extends State<MyHomePage> {
                       MaterialPageRoute(builder: (context) => See()));
                 },
                 child: Text("Joshua See"),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: ElevatedButton(
+                style: ButtonStyle(
+                  backgroundColor:
+                      MaterialStateProperty.all<Color>(Colors.orange),
+                ),
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => Quigley()));
+                },
+                child: Text("Charissa Quigley"),
               ),
             ),
           ],
