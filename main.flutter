@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import './widgets/Hellweg.dart';
+import './widgets/see.dart'
 
 void main() {
   runApp(MyApp());
@@ -9,11 +10,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Group 3 Application',
       theme: ThemeData(
         primarySwatch: Colors.orange,
       ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+      home: MyHomePage(title: 'Group 3 Github App'),
     );
   }
 }
@@ -28,15 +29,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  //var declare here
-  final text = TextEditingController();
-
-  void _displayText() {
-    FocusScope.of(context).unfocus();
-    setState(() {
-      print(text.text);
-    });
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -63,9 +55,20 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
                 onPressed: () {
                   Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => Quigley()));
+                      MaterialPageRoute(builder: (context) => Hellweg()));
                 },
-                child: Text("Member 1"),
+                child: Text("Zachary Hellweg"),
+              ),
+              child: ElevatedButton(
+                style: ButtonStyle(
+                  backgroundColor:
+                      MaterialStateProperty.all<Color>(Colors.yellow),
+                ),
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => See()));
+                },
+                child: Text("Josh See"),
               ),
             ),
           ],
@@ -73,4 +76,5 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
     );
   }
+}
 }
