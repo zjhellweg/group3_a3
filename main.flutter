@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:group3a3/widgets/Tiemens.dart';
 import './widgets/Hellweg.dart';
 import './widgets/see.dart';
 import './widgets/Quigley.dart';
@@ -130,23 +131,43 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
             ),
             Padding(
-                padding: const EdgeInsets.all(10.0),
-                child: ElevatedButton(
-                  style: ButtonStyle(
-                    backgroundColor:
-                        MaterialStateProperty.all<Color>(Colors.cyan),
-                  ),
-                  onPressed: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => bensPage()));
-                  },
-                  child: SizedBox(
-                      width: 125,
-                      child: Text(
-                        "Ben Weidner",
-                        textAlign: TextAlign.center,
-                      )),
-                ))
+              padding: const EdgeInsets.all(10.0),
+              child: ElevatedButton(
+                style: ButtonStyle(
+                  backgroundColor:
+                      MaterialStateProperty.all<Color>(Colors.cyan),
+                ),
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => bensPage()));
+                },
+                child: SizedBox(
+                    width: 125,
+                    child: Text(
+                      "Ben Weidner",
+                      textAlign: TextAlign.center,
+                    )),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: ElevatedButton(
+                style: ButtonStyle(
+                  backgroundColor:
+                      MaterialStateProperty.all<Color>(Colors.purple),
+                ),
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => Tiemens()));
+                },
+                child: SizedBox(
+                    width: 125,
+                    child: Text(
+                      "Joshua Tiemens",
+                      textAlign: TextAlign.center,
+                    )),
+              ),
+            ),
           ],
         ),
       ),
